@@ -1,0 +1,68 @@
+#{extends 'main.html' /} #{set title:'Listar' /}
+
+<form action="@{Visitas.listar}">
+	<br />
+	<div class="row">
+		<div class="col-6">
+			<input type="text" class="form-control" name="termo" value="${termo}" />
+		</div>
+		<div class="col-6">
+			<input type="submit" class="btn btn-primary btn btn-light "
+				value="Pesquisar" />
+		</div>
+	</div>
+</form>
+<br />
+
+<h2 class="text-left mb-4">Reservas</h2>
+
+
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>Nome</th>
+			<th>Email</th>
+			<th>senha</th>
+			<th>data</th>
+			
+
+		</tr>
+	</thead>
+	#{list items:visitas, as:'v'}
+
+	<tr>
+		<td>${v.nome}</td>
+		<td>${v.email}</td>
+		<td>${v.senha}</td>
+		<td>${v.data}</td>
+		
+
+
+		<td><a href="@{Visitas.editar(v.id)}"
+			class="btn btn-outline-warning "> Editar </a> 
+			
+			<a
+			href="@{Visitas.remover(v.id)}" class="btn btn-outline-danger"
+			onclick="return confirm('Deseja realmente excluir esta reserva?')">
+				Excluir </a>
+				
+		</td>
+
+
+
+
+	</tr>
+	#{/list}
+	<tbody>
+
+	</tbody>
+</table>
+
+
+
+<a href="@{Visitas.form}" class="btn btn-primary btn btn-light">Nova
+	Pessoa</a>
+
+
+
+
