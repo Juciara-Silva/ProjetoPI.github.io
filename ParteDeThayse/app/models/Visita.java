@@ -13,6 +13,7 @@ public class Visita extends Model {
     public String email;
     public String senha;  
     public Date data;
+    public String categoria;
   
  
 }
