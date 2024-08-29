@@ -5,55 +5,64 @@ Pessoa!!!' /} #{/else}
 <form action="/Visitas/salvar">
 
 
-	<div class="container mt-5">
+	<div class="container text-center">
+		<br />
+		<h2>Agendar reserva</h2>
+	</div>
 
-		<h2 class="text-center>">Preencha os dados para agendar sua
-			visita!</h2>
+	<br />
 
-		<div class="p-5 bg-white rounded shadow">
+	<div class="d-flex justify-content-center">
 
-			<div class="mb-3">
+		<div class="shadow p-3 mb-5 bg-body-tertiary rounded w-75">
 
-				<label for="nome" class="form-label text-dark">Nome: </label> <input
-					type="text" id="nome" name="v.nome" class="form-control"
-					value="${v?.nome}">
-			</div>
 
-			<div class="mb-3">
-				<label for="email" class="form-label text-dark">Email: </label> <input
-					type="email" id="email" name="v.email" class="form-control"
-					value="${v?.email}">
-			</div>
 
-			<div class="mb-3">
-				<div class="col-auto">
-					<label for="senha" class="form-label text-dark">Senha: </label>
+			<div class="container mb-3">
+
+				<div class="mb-3">
+
+					<label for="nome" class="form-label text-dark">Nome: </label> <input
+						type="text" id="nome" name="v.nome" class="form-control"
+						value="${v?.nome}">
 				</div>
 
 				<div class="mb-3">
-					<input type="password" id="senha" class="form-control"
-						aria-describedby="passwordHelpInline">
+					<label for="email" class="form-label text-dark">Email: </label> <input
+						type="email" id="email" name="v.email" class="form-control"
+						value="${v?.email}">
 				</div>
+
 				<div class="mb-3">
-					<span id="senha" class="form-text text-dark"> Deve ter
-						entre 8 e 20 caracteres. </span>
+					<div class="col-auto">
+						<label for="senha" class="form-label text-dark">Senha: </label>
+					</div>
+
+					<div class="mb-3">
+						<input type="password" id="senha" class="form-control"
+							aria-describedby="passwordHelpInline">
+					</div>
+					<div class="mb-3">
+						<span id="senha" class="form-text text-dark"> Deve ter
+							entre 8 e 20 caracteres. </span>
+					</div>
 				</div>
-			</div>
 
-			<div class="mb-3">
-				<label for="data" class="form-label text-dark">Data:</label> <input
-					type="date" id="data" name="v.data" class="form-control"
-					value="${v?.data}">
-			</div>
+				<div class="mb-3">
+					<label for="data" class="form-label text-dark">Data:</label> <input
+						type="date" id="data" name="v.data" class="form-control"
+						value="${v?.data}">
+				</div>
 
-			<button type="submit" class="btn btn-primary w-100 ">Enviar</button>
+				<div class="text-center mt-4">
+					<button type="submit" class="btn btn-primary w-50">Enviar</button>
+				</div>
 </form>
 
 <div class="text-center mt-4">
-	<a href="@{Visitas.listar}" class="btn btn-secondary">Voltar para
+	<a href="@{Visitas.listar}" class="btn btn-dark">Voltar para
 		Listagem</a>
 </div>
-
 
 
 
